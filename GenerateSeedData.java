@@ -18,10 +18,9 @@ public class GenerateSeedData{
 	int yCoordinate;
 
 	 Map<Pairs, Integer> map = new HashMap<Pairs, Integer>(); //Holds coordinates and their distances
-	 Map<Pairs, Integer> eventMap = new HashMap<Pairs, Integer>(); //Holds cooridnates with their eventcount
+	 Map<Pairs, Integer> eventMap = new HashMap<Pairs, Integer>(); //Holds coordinates with their eventcount
 	 Map<Pairs, Integer> filteredEvents = new HashMap<Pairs, Integer>();  //Holds coordinates with evencount 1
-    	 Map<Integer, Integer> eventTicks = new HashMap<Integer, Integer>(); //Holds entries ID with the number of tickets
-    	 Map<Integer, Integer> maps = new HashMap<>(); //Holds eventIds and distances
+    	 Map<Integer, Integer> maps = new HashMap<>(); //Holds eventIds and the corr distances
      	 Map<Integer, Integer> amountTick= new HashMap<Integer, Integer>(); //Holds eventID with their ticketQuantity
     	 Map<Integer, Double> amountID= new HashMap<Integer, Double>();//Holds ticketID with cheapest price
 
