@@ -15,5 +15,9 @@ public class Ticket {
     public double getPrice(){
       	return price;
     }
+     public String toString()
+    {
+        return "Price #" + getPrice();
+    }
 
 }
