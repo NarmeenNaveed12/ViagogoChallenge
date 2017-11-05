@@ -17,13 +17,13 @@ public class GenerateSeedData{
 	int xCoordinate;
 	int yCoordinate;
 
-	 Map<Pairs, Integer> map = new HashMap<Pairs, Integer>(); //map to hold all coordinates and their distances
-	 Map<Pairs, Integer> eventMap = new HashMap<Pairs, Integer>(); //map to hold all cooridnates with their eventcount
-	 Map<Pairs, Integer> filteredEvents = new HashMap<Pairs, Integer>();  //map to hold all coordinates with evencount 1
-    	 Map<Integer, Integer> eventTicks = new HashMap<Integer, Integer>(); //map to hold all entries ID with the number of tickets
-    	 Map<Integer, Integer> maps = new HashMap<>(); //map that holds eventIds and distnaces
-     	 Map<Integer, Integer> amountTick= new HashMap<Integer, Integer>(); //map to hold eventID with their ticketQuantity
-    	 Map<Integer, Double> amountID= new HashMap<Integer, Double>();//map to hold ticketID with cheapest price
+	 Map<Pairs, Integer> map = new HashMap<Pairs, Integer>(); //Holds coordinates and their distances
+	 Map<Pairs, Integer> eventMap = new HashMap<Pairs, Integer>(); //Holds cooridnates with their eventcount
+	 Map<Pairs, Integer> filteredEvents = new HashMap<Pairs, Integer>();  //Holds coordinates with evencount 1
+    	 Map<Integer, Integer> eventTicks = new HashMap<Integer, Integer>(); //Holds entries ID with the number of tickets
+    	 Map<Integer, Integer> maps = new HashMap<>(); //Holds eventIds and distances
+     	 Map<Integer, Integer> amountTick= new HashMap<Integer, Integer>(); //Holds eventID with their ticketQuantity
+    	 Map<Integer, Double> amountID= new HashMap<Integer, Double>();//Holds ticketID with cheapest price
 
     int minimum = 0;
     int maximum = 1;
