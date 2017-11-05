@@ -21,16 +21,14 @@ public class GenerateSeedData{
 	 Map<Pairs, Integer> eventMap = new HashMap<Pairs, Integer>(); //map to hold all cooridnates with their eventcount
 	 Map<Pairs, Integer> filteredEvents = new HashMap<Pairs, Integer>();  //map to hold all coordinates with evencount 1
     	 Map<Integer, Integer> eventTicks = new HashMap<Integer, Integer>(); //map to hold all entries ID with the number of tickets
-    	 Map<Integer, Integer> maps = new HashMap<>(); //map that holds distances and event count----????? check filtered agai
-     	Map<Integer, Integer> amountTick= new HashMap<Integer, Integer>(); 
-    	 Map<Integer, Double> amountID= new HashMap<Integer, Double>();
-    	 List<Double> listingPrice = new ArrayList<Double>();
+    	 Map<Integer, Integer> maps = new HashMap<>(); //map that holds eventIds and distnaces
+     	 Map<Integer, Integer> amountTick= new HashMap<Integer, Integer>(); //map to hold eventID with their ticketQuantity
+    	 Map<Integer, Double> amountID= new HashMap<Integer, Double>();//map to hold ticketID with cheapest price
 
     int minimum = 0;
     int maximum = 1;
     Event e;
     int distance;
-   
    /**
     1. This method returns the 5 closest events with the cheapest tickets
    **/
@@ -46,7 +44,7 @@ public class GenerateSeedData{
         if((xCoordinate >= -10 && xCoordinate <=10 ) && (yCoordinate >= -10 && yCoordinate <=10)) { 
         
 	/**
-	1.Calculating distance of each coordinate from entered one
+	1.Calculating distance of each coordinate from input pair
 	2.Putting Pairs and corr Distance in the map
 	**/
     	for(int x1 = -10; x1 <= 10; x1++) {
@@ -80,7 +78,7 @@ public class GenerateSeedData{
            } 
         }
          /**
-        2. Returning a map with eventId and their corr distances
+        1. Returning a map with eventId and their corr distances
         **/
        Set<Pairs> commonKey = map.keySet();
        commonKey.retainAll(map.keySet());
@@ -106,7 +104,6 @@ public class GenerateSeedData{
         /**
         1. Sorting the list of distances and the corr ID
         **/
-
         Set<Entry<Integer, Integer>> sortedSet = maps.entrySet();
         List<Entry<Integer, Integer>> sortedList = new LinkedList<Entry<Integer, Integer>>(sortedSet);
         Collections.sort(sortedList, new Comparator<Entry<Integer, Integer>>() {
@@ -123,6 +120,7 @@ public class GenerateSeedData{
         for(Entry<Integer, Integer> entry: sortedList) {
             sortedMap.put(entry.getKey(), entry.getValue());
         }
+		
         /**
         1. Returning five of the closest event with Ids, distances and cheapest price 
         **/
@@ -132,7 +130,7 @@ public class GenerateSeedData{
                 break;
             }
             System.out.println("Event" + " " +  entry.getKey() + " " + "-" + " " + "$" + 
-                Math.round(amountID.get(entry.getKey()) * 100.0) / 100.0 +  "," + "Distance" + entry.getValue()); //fix the decimal
+                Math.round(amountID.get(entry.getKey()) * 100.0) / 100.0 +  "," + "Distance" + entry.getValue()); 
             counter++;
         }   
     
