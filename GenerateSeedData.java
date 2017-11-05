@@ -50,7 +50,7 @@ public class GenerateSeedData{
     	for(int x1 = -10; x1 <= 10; x1++) {
 	    	for(int y1 = -10; y1 <= 10; y1++) {
 	    		distance = Math.abs(xCoordinate - x1) + Math.abs(yCoordinate-y1); 
-	    		map.put(new Pairs(x1, y1),distance); 
+	    		map.put(new Pairs(x1,y1),distance); 
 	   	}
 	}
     
