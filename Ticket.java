@@ -7,6 +7,7 @@ public class Ticket {
     double price;
     final double MIN = 1, MAX = 100; 
     Random random=new Random();
+  
   /**
   1.Generating random numbers for price here
   **/
@@ -17,9 +18,6 @@ public class Ticket {
     public double getPrice(){
       	return price;
     }
-     public String toString()
-    {
-        return getPrice();
-    }
+    
 
 }
