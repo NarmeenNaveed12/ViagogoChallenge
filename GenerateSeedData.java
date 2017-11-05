@@ -135,7 +135,7 @@ public class GenerateSeedData{
             counter++;
         }   
     
-} // END IF STATEMENT WHICH CHECKS INPUT
+	} // END IF STATEMENT WHICH CHECKS INPUT
 
          else{ 
              System.out.println("INVALID ENTRY! PLEASE ENTER BETWEEN -10 AND 10!");
