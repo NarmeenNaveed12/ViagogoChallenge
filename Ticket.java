@@ -9,7 +9,7 @@ public class Ticket {
     Random random=new Random();
   
     public Ticket(){
-        price = ((int)(Math.random() * (MAX + 1 - MIN))) + MIN;
+        price = ((double)(Math.random() * (MAX + 1 - MIN))) + MIN;
     }
 
     public double getPrice(){
