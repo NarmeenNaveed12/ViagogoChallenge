@@ -98,7 +98,6 @@ public class GenerateSeedData{
          /**
         1. Getting min priced ticket for each event that has a ticket count more than 0
         **/
-        System.out.println("EVENT AND ITS TICKET COUNT"); 
         Set<Entry<Integer, Integer>> idTickno = amountTick.entrySet();
         for(Entry<Integer, Integer> entry5 : idTickno) { 
             Double minT = Double.POSITIVE_INFINITY;
