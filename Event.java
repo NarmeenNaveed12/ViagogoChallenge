@@ -8,8 +8,8 @@ public class Event{
 	int counter = 0;
 
 	int MIN = 0, MAX = 3; 
-  static int ticketQuant = 0 ;
-  int counter1 = 0;
+  	static int ticketQuant = 0 ;
+  	int counter1 = 0;
 
 public Event(){
   uniqueId++;
