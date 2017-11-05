@@ -23,15 +23,6 @@ public int getY() {
   return this.y;
 }
 
-public boolean equals(Object o) {
-if (o == null || o.getClass() != this.getClass()) { 
-  return false; 
-}
-  Pairs that = (Pairs) o;
-  return (x == null ? that.x == null : x.equals(that.x))
-  && (y == null ? that.y == null : y.equals(that.y));
-}
-
 public String toString(){
   return x + "," + y;
 }
