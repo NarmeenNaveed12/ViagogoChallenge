@@ -124,14 +124,14 @@ public class GenerateSeedData{
         /**
         1. Returning five of the closest event with Ids, distances and cheapest price 
         **/
-	System.out.println("Closest Events to " + "(" + xCoordinate + ", " + yCoordinate + ")" + ":" );	
+	System.out.println("Closest Events to " + "(" + xCoordinate + "," + yCoordinate + ")" + ":" );	
         int counter = 0;
         for(Entry<Integer, Integer> entry : sortedMap.entrySet()) {
             if (counter == 5){
                 break;
             }
             System.out.println("Event" + " " +  entry.getKey() + " " + "-" + " " + "$" + 
-                Math.round(amountID.get(entry.getKey()) * 100.0) / 100.0 +  " ," + "Distance" + entry.getValue()); 
+                Math.round(amountID.get(entry.getKey()) * 100.0) / 100.0 +  " , " + "Distance" + entry.getValue()); 
             counter++;
         }   
     
