@@ -27,11 +27,11 @@ public class GenerateSeedData{
 	 Map<Pairs, Integer> map = new HashMap<Pairs, Integer>(); //map to hold all coordinates and their distances
 	 Map<Pairs, Integer> eventMap = new HashMap<Pairs, Integer>(); //map to hold all cooridnates with their eventcount
 	 Map<Pairs, Integer> filteredEvents = new HashMap<Pairs, Integer>();  //map to hold all coordinates with evencount 1
-     Map<Integer, Integer> eventTicks = new HashMap<Integer, Integer>(); //map to hold all entries ID with the number of tickets
-     Map<Integer, Integer> maps = new HashMap<>(); //map that holds distances and event count----????? check filtered agai
-     Map<Integer, Integer> amountTick= new HashMap<Integer, Integer>(); 
-     Map<Integer, Double> amountID= new HashMap<Integer, Double>();
-     List<Double> listingPrice = new ArrayList<Double>();
+    	 Map<Integer, Integer> eventTicks = new HashMap<Integer, Integer>(); //map to hold all entries ID with the number of tickets
+    	 Map<Integer, Integer> maps = new HashMap<>(); //map that holds distances and event count----????? check filtered agai
+     	Map<Integer, Integer> amountTick= new HashMap<Integer, Integer>(); 
+    	 Map<Integer, Double> amountID= new HashMap<Integer, Double>();
+    	 List<Double> listingPrice = new ArrayList<Double>();
 
     int minimum = 0;
     int maximum = 1;
@@ -48,15 +48,20 @@ public class GenerateSeedData{
         xCoordinate = keyboard.nextInt();
         System.out.println("Please enter the Y Coordinate followed by the return key");
         yCoordinate = keyboard.nextInt();
-
-        if((xCoordinate >= -10 && xCoordinate <=10 ) && (yCoordinate >= -10 && yCoordinate <=10)) { // RANGE CHECK FOR SCANNER
-       
+	    
+	/** Range check for input **/
+        if((xCoordinate >= -10 && xCoordinate <=10 ) && (yCoordinate >= -10 && yCoordinate <=10)) { 
+        
+	/**
+	1.Calculating distance of each coordinate from entered one
+	2.Putting Pairs and corr Distance in the map
+	**/
     	for(int x1 = -10; x1 <= 10; x1++) {
 	    	for(int y1 = -10; y1 <= 10; y1++) {
-	    		distance = Math.abs(xCoordinate - x1) + Math.abs(yCoordinate-y1); //calculating distance of each coordinate from entered one
-	    		map.put(new Pairs(x1, y1),distance); //putting pairs and distance in the map
-	   		}
-		}
+	    		distance = Math.abs(xCoordinate - x1) + Math.abs(yCoordinate-y1); 
+	    		map.put(new Pairs(x1, y1),distance); 
+	   	}
+	}
     
         /**
         1. Setting a max of 1 event per coordinate
