@@ -10,13 +10,6 @@ import java.util.Map;
 import java.util.HashMap;
 import java.util.Iterator;
 
-
-/**
-
--make sure you make the evnents thing shorter
--make sure you can enter double in scanner --???
-
-**/
 public class GenerateSeedData{
 
 	Random rand = new Random(); 
